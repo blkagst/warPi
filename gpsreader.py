@@ -68,7 +68,7 @@ class GpsPoller(threading.Thread):
         self.running = True
     def run(self):
         while True:
-            self.current_value = self.gpsd.next()
+            self.current_value = gpsd.next()
 
 if __name__ == '__main__':
     if os.geteuid() == 0:
